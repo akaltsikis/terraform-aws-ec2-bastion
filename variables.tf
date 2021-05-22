@@ -13,6 +13,11 @@ variable "name" {
   default = "bastion"
 }
 
+variable "instance_profile" {
+  type = string
+  default = ""
+}
+
 variable "ext_security_groups" {
   description = "External security groups to add to bastion host"
   type        = list(any)
