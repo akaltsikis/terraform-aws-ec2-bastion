@@ -33,7 +33,7 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = concat(var.ext_security_groups, [
     aws_security_group.this.id
   ])
-  subnet_id                   = var.private_subnets[0]
+  subnet_id                   = var.private_subnets
   associate_public_ip_address = false
 
   tags = {
